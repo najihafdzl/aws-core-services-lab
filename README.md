@@ -1,5 +1,5 @@
 # AWS Core Services Workshop
-![main image](images/ws-image.png)
+![main image](images/logo.png)
 
 ## Introduction
 By doing this labs you will learn about the AWS foundational services as well as architecture best practices.
