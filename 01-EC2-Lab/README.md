@@ -39,7 +39,7 @@ purpose.
 
 5.  In the resulting pop up window, type *\[First Name\]-\[Last Name\]-ImmersionDay* into the **Key Pair Name:** text box and click **Create.
     
-    [images](./media/image4.png)
+    ![images](./media/image4.png)
     
 6.  The page prompt you to download the file "*\[First Name\]-\[Last
     Name\]-ImmersionDay*.pem" to the local drive. Follow your browser
