@@ -20,6 +20,6 @@ By doing this labs you will learn about the AWS foundational services as well as
 
 ## How to login to your lab environment
 
-Before starting the labs yo will receive the credentials to access your AWS environment.
+Before starting the labs you will receive the credentials to access your AWS environment.
 
 To access your account: https://najlabs.awsapps.com/start
