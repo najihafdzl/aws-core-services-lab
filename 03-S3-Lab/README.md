@@ -26,10 +26,6 @@ Create a Bucket in S3
 Every object in Amazon S3 is stored in a bucket. Before you can store
 data in Amazon S3 you must create a bucket.
 
-***Note:** You are not charged for creating a bucket; you are only
-charged for storing objects in the bucket and for transferring objects
-in and out of the bucket.*
-
 1.  Sign into the AWS Management Console and open the Amazon S3 console
     at https://console.aws.amazon.com/s3
 
