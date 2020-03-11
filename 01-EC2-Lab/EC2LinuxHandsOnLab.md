@@ -1,15 +1,3 @@
-![Image result for aws
-logo](./media/image1.jpeg){width="1.629630358705162in"
-height="1.2270581802274716in"}
-
-AWS Immersion Day
-
-EC2 Hands-On Lab
-
-Getting Started with Linux on Amazon EC2
-
- 
-
 EC2 Overview
 ============
 
@@ -43,8 +31,7 @@ purpose.
     bottom of the leftmost menu. This will display a page to manage your
     SSH key pairs.
 
-![](./media/image2.png){width="5.287129265091863in"
-height="2.4046511373578303in"}
+![images](media/image2.png)
 
 4.  To create a new SSH key pair, click the **Create Key Pair** button
     at the top of the browser window.
