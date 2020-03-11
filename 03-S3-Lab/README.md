@@ -36,7 +36,7 @@ data in Amazon S3 you must create a bucket.
 3.  Enter a bucket name in the **Bucket Name** field. The bucket name
     you choose must be unique across all existing bucket names in Amazon
     S3. One way to do that is to prefix your bucket names with your
-    organisation\'s name. For this workshop, let's name our bucket /my-first-bucket-<YOUR NAME>-us-east-1/
+    organisation\'s name. For this workshop, let's name our bucket **my-first-bucket-/<YOUR NAME/>-us-east-1**
 
 Bucket names must comply with the following requirements.
 
@@ -97,14 +97,14 @@ access to the file.
 2.  Click **Add Files** to select a file to upload. A file selection
     dialog box opens.
 
-> ![images](./media/image7.png)
+ ![images](./media/image7.png)
 
 3.  Select a small file to upload and click **Open**. The **Upload**
     dialogue shows the files and folders you\'ve selected to upload.
 
 4.  Click **Next** to review permissions. Use the default permissions.
 
-> ![images](./media/image8.png)
+ ![images](./media/image8.png)
 
 5.  Click Next to review properties. For the purpose of this lab we will
     be using the standard tiering option. Depending on your use case you
@@ -115,7 +115,7 @@ access to the file.
 6.  Click **Upload**. You can watch the progress of the upload at the
     bottom of the screen. This appears as soon as the upload begins.
 
-> **Good work - you\'ve added a file to your bucket!**
+ **Good work - you\'ve added a file to your bucket!**
 
 View an Object
 ==============
@@ -168,7 +168,7 @@ like to move the object to a different bucket or folder.
     cause the object level public access that was set in a previous step
     to be overridden.
 
-2.  In the Amazon S3 console, create a new bucket named **my-other-bucket-<YOUR-NAME>-us-east-1 in the **US East (N. Virginia)** region
+2.  In the Amazon S3 console, create a new bucket named **my-other-bucket-/<YOUR-NAME/>-us-east-1** in the **US East (N. Virginia)** region
 
 3.  Select the first bucket you created and view the list of objects.
 
