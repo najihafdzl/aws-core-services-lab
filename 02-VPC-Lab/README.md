@@ -34,15 +34,15 @@ Address (EIP)**. An Elastic IP is a static public IPv4 address that you
 can attach to AWS resources, such as EC2 instances and NAT Gateways.
 Elastic IPs are required for NAT Gateways.
 
-To create one, go to **Elastic IPs** in the sidebar, and press
+1. To create one, go to **Elastic IPs** in the sidebar, and press
 **Allocate new address**, **Allocate**, **Close.**
 
 ![images](./media/image4.png)
 
-Now click on **VPC Dashboard** in the top left corner to go back to the
+2. Now click on **VPC Dashboard** in the top left corner to go back to the
 main VPC page.
 
-Click on **Launch VPC Wizard** to start the VPC Wizard and select '**VPC
+3. Click on **Launch VPC Wizard** to start the VPC Wizard and select '**VPC
 with Public and Private Subnets'**.
 
 ![images](./media/image5.png)
@@ -50,7 +50,9 @@ with Public and Private Subnets'**.
 This option will create a VPC with a /16 CIDR block and two subnets with
 /24 CIDR blocks which have 256 total IP addresses each. In each subnet,
 **AWS reserves 5 IP addresses**. In this case, that leaves you 251 IP
-addresses per subnet. Fill in the **VPC name** (I called my VPC
+addresses per subnet.
+
+4. Fill in the **VPC name** (I called my VPC
 "**test"**) and select your **Elastic IP Allocation ID** from the
 drop-down. For this lab, we will leave the rest of the default
 configuration as is.
@@ -64,7 +66,7 @@ but doesn't allow anyone on the internet access to your resources. NAT
 is helpful for when a resource needs to pull down updates from the
 internet but should not be publicly accessible.
 
-Click on **Create VPC**. This step will take a couple minutes. Once your
+5. Click on **Create VPC**. This step will take a couple minutes. Once your
 VPC has been created, click **OK**.
 
 Wow! It only took you a few minutes to set up an entire virtual private
@@ -78,18 +80,18 @@ Let's walk through the VPC Console and explain each component that the
 wizard created.
 
 From the last step, you should now be on the **Your VPCs** dashboard
-looking at all of your VPCs in this region. Select the VPC that you just
-created, and look at the **Summary** tab. If you can't see everything in
-the pane, you can pull the pane up by dragging on the pane's top line.
+looking at all of your VPCs in this region.
 
-In the **Summary** tab in the left-hand column, you can see the **Main
+6. Select the VPC that you just created, and look at the **Summary** tab. 
+
+7. In the **Summary** tab in the left-hand column, you can see the **Main
 Route Table** for your VPC. Any subnets in the VPC that do not have a
 route table directly associated with it will use this route table by
 default. To explore this further, click on the **Route table link**.
 
 ![images](./media/image7.png)
 
-You are now in the **Route Tables** dashboard, filtered on the main
+8. You are now in the **Route Tables** dashboard, filtered on the main
 route table of the VPC you just created. That means that there should be
 only one route table shown. Select this route table and click on the
 **Subnet Associations** tab.
@@ -104,7 +106,7 @@ of the VPC.
 What makes a subnet public or private? We can find out by looking at the
 routes in this table.
 
-Click on the **Routes** tab.
+9. Click on the **Routes** tab.
 
 In the **Routes** tab, look at the **Target** column. You'll see one
 **local route** which every route table has. This ensures that resources
@@ -115,12 +117,12 @@ created. Remember that a NAT gateway gives internet access to resources
 which are not publicly accessible. Because the resources in this subnet
 are not publicly accessible, this is considered a **private subnet**.
 
-Now let's find out what makes a subnet public. First, get rid of the
+10. Now let's find out what makes a subnet public. First, get rid of the
 filter on this view. To do this, **click the X in the search bar**. You
 are now looking at all of the route tables in this region. Your
 dashboard should look something like the screenshot below.
 
-Select the other route table in your VPC (check **VPC** column for name)
+11. Select the other route table in your VPC (check **VPC** column for name)
 which is not the main route table (check **Main** column for **No**). In
 the **Routes** tab, you'll see a route to an **Internet Gateway (IGW)**.
 IGWs are another managed and scalable service like the NAT Gateway
@@ -134,7 +136,7 @@ is best practice for your VPC's main route table to not have a route to
 an IGW so that subnets are private by default and only public if
 specified.
 
-Go to the **Subnet Associations** tab and confirm that it is the
+12. Go to the **Subnet Associations** tab and confirm that it is the
 **Public subnet** which is associated with this route table. Click on
 the **Public subnet link**.
 
@@ -145,7 +147,7 @@ automatically with the VPC) for both subnets. Similar to the main route
 table, the default NACL is implicitly associated with all subnets in a
 VPC unless another NACL is directly associated with that subnet.
 
-Go to the **Network ACL** tab to look at the default NACL rules. Rules
+13. Go to the **Network ACL** tab to look at the default NACL rules. Rules
 are evaluated in order from lowest to highest. If the traffic doesn't
 match any rules, the \* rule is applied, and the traffic is denied.
 Default NACLs allow all inbound and outbound traffic, as shown below,
@@ -178,27 +180,27 @@ of your VPC.
 To get started, go to the **Services** drop down menu in the top left
 corner and go to the **EC2 dashboard**.
 
-1.  Select Launch Instance, and then in the **Quick Start** section
+14.  Select Launch Instance, and then in the **Quick Start** section
     select the first Amazon Linux 2 AMI and click **Select.**
 
     ![images](./media/image11.png)
 
-2.  In the Choose Instance Type tab, select the t2.micro instance size
+15.  In the Choose Instance Type tab, select the t2.micro instance size
     and click **Next**.
 
-3.  On this page, you decide which network and subnet this resource will
+16.  On this page, you decide which network and subnet this resource will
     be put into. Change the **Network** field to the VPC that you just
     created and change the **Subnet** field to the **Public subnet**.
     Leave the other default settings as is. Click **Next**.
 
 ![images](./media/image12.png)
 
-4.  For this lab, you can accept the default values in the remaining
+17.  For this lab, you can accept the default values in the remaining
     steps, so finish creating this instance by clicking on **Review and
     Launch.** You will see a warning that your security group is open to
     the world. You can ignore this warning and select **Launch**.
 
-5.  In the pop-up window, select **Proceed without a key pair** from the
+18.  In the pop-up window, select **Proceed without a key pair** from the
     drop-down and check the **acknowledgement** box. For this lab, you
     will not need to SSH into this instance. Click **Launch Instances**
     and then **View Instances**.
@@ -219,30 +221,34 @@ tell by looking at the **Instance State** and **Status Checks** columns.
 If you see **pending** state and/or status **Initializing**, the
 instance is not ready yet.
 
-While you're waiting for your instance to be ready, select the instance
+19. While you're waiting for your instance to be ready, select the instance
 to look at the **Description** tab. At the top of the right-hand column,
 there is the information that we need to access the instance -- the IP
 addresses and DNS records associated with the instance. However, you can
 see that this instance doesn't have a public IP or DNS yet. We will need
 at least one of these to ping this instance via the internet.
 
-![images](./media2/media/image13.png)
+![images](./media/image13.png)
 
 To fix this, we are going to attach an **Elastic IP** to the EC2
-instance. First, copy the **Instance ID** of this EC2 instance by
+instance.
+
+20. First, copy the **Instance ID** of this EC2 instance by
 hovering your mouse to the right of the Instance ID line in the
 **Description** tab, and clicking on the **Copy to clipboard** icon that
 appears.
 
-Next, click on **Elastic IPs** in the sidebar (under the **Network &
+21. Next, click on **Elastic IPs** in the sidebar (under the **Network &
 Security** section). Create a new Elastic IP as before, except this
 time, **do not** click on the **Close** button. Instead, you will:
 **Allocate new address, Allocate**, and then click on the **Elastic IP**
 link in the **New address request succeeded** box.
 
-![images](./media2/media/image14.png)
+![images](./media/image14.png)
 
-Now you are back on the **Elastic IPs** dashboard. Go to the **Actions**
+Now you are back on the **Elastic IPs** dashboard. 
+
+22. Go to the **Actions**
 dropdown and select **Associate address**. Paste the Instance ID that
 you copied previously into the **Instance** box and click on
 **Associate**, then **Close**.
@@ -252,14 +258,15 @@ able to ping the instance over the internet. It now has a public IP
 address from the Elastic IP, and it's in the public subnet which has a
 route to an IGW.
 
-In the **Description** tab, copy the Elastic IP address.
+23. In the **Description** tab, copy the Elastic IP address.
 
-![images](/media/image15.png)
+![images](./media/image15.png)
 
-To ping the instance, you need to open your CLI. On Windows, open the
-**Command Prompt**. On Mac, open the **Terminal**. Type **ping,** then a
-**space**, then **paste the Elastic IP** from above and click **enter**.
+24. Open your CLI. On Windows, open the **Command Prompt**. On Mac, open the **Terminal**. Type:
 
+``` sh 
+ping <your-elastic-IP>
+```
 If the instance is reachable, we expect to see lines appearing such as
 
 64 bytes from 13.237.153.185: icmp\_seq=0 ttl=238 time=169.294 ms
@@ -280,7 +287,7 @@ we left the NACL of the public subnet as is, which allows all traffic by
 default. So, let's check the security group associated with this
 instance.
 
-In the **EC2 dashboard**, go to the **Instances** section in the
+25. In the **EC2 dashboard**, go to the **Instances** section in the
 sidebar. Select the instance that you created and look at the
 **Description** tab. In the left column, click on the first **Security
 groups** link. It should be called something similar to
@@ -288,7 +295,7 @@ groups** link. It should be called something similar to
 
 ![images](./media/image16.png)
 
-You are now in the **Security Groups** dashboard. Go to the **Inbound**
+26. You are now in the **Security Groups** dashboard. Go to the **Inbound**
 tab.
 
 Remember when we were creating the EC2 instance we only specified the
@@ -296,13 +303,13 @@ AMI, instance type, and VPC subnet. We left all the other default
 settings as is. One of these default settings created this security
 group, which allows all inbound access on SSH port 22.
 
-Pings use **ICMP**, so we will need to change the security group rule to
+27. Pings use **ICMP**, so we will need to change the security group rule to
 allow ICMP traffic rather than SSH traffic. Click on the **Edit**
 button.
 
 ![images](./media/image17.png)
 
-Click on **SSH** to open the drop-down and change it to **All** **ICMP -
+28. Click on **SSH** to open the drop-down and change it to **All** **ICMP -
 IPv4**. Click **Save**.
 
 Since security groups are stateful, you don't need to edit the outbound
@@ -310,7 +317,7 @@ rules. The security group will allow the instance to respond to the ping
 since it saw the ping arrive at the instance. This change will also take
 effect immediately, so we can try to ping the instance again right away.
 
-Go back to your CLI and hit the **up arrow** and then **enter** to try
+29. Go back to your CLI and hit the **up arrow** and then **enter** to try
 and ping the instance again.
 
 ![images](./media/image18.png)
