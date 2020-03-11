@@ -36,7 +36,7 @@ data in Amazon S3 you must create a bucket.
 3.  Enter a bucket name in the **Bucket Name** field. The bucket name
     you choose must be unique across all existing bucket names in Amazon
     S3. One way to do that is to prefix your bucket names with your
-    organisation\'s name. For this workshop, let's name our bucket **my-first-bucket-/<YOUR NAME/>-us-east-1**
+    organisation\'s name. For this workshop, let's name our bucket **my-first-bucket-[YOUR NAME]-us-east-1**
 
 Bucket names must comply with the following requirements.
 
@@ -147,7 +147,7 @@ object locally.*
 4.  Scroll down and click on **Everyone** and **check** read object. You
     should see the following message pop up. Click **Save**.
 
-    ![images](./media3/media/image13.png)
+    ![images](./media/image13.png)
 
 5.  Click on the **Overview** tab, and then click on the link to your
     object at the bottom of the screen to view the file using your
@@ -168,7 +168,7 @@ like to move the object to a different bucket or folder.
     cause the object level public access that was set in a previous step
     to be overridden.
 
-2.  In the Amazon S3 console, create a new bucket named **my-other-bucket-/<YOUR-NAME/>-us-east-1** in the **US East (N. Virginia)** region
+2.  In the Amazon S3 console, create a new bucket named **my-other-bucket-[YOUR NAME]-us-east-1** in the **US East (N. Virginia)** region
 
 3.  Select the first bucket you created and view the list of objects.
 
