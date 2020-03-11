@@ -183,7 +183,7 @@ corner and go to the **EC2 dashboard**.
 14.  Select Launch Instance, and then in the **Quick Start** section
     select the first Amazon Linux 2 AMI and click **Select.**
 
-    ![images](./media/image11.png)
+   ![images](./media/image11.png)
 
 15.  In the Choose Instance Type tab, select the t2.micro instance size
     and click **Next**.
