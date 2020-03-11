@@ -82,7 +82,7 @@ menu.
 #include https://s3.amazonaws.com/immersionday-labs/bootstrap.sh
 ```
 
-    Click **Next: Add Storage.**
+   Click **Next: Add Storage.**
 
     
 12. On this page you have the ability to modify or add storage and disk
