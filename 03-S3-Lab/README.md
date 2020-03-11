@@ -31,7 +31,7 @@ data in Amazon S3 you must create a bucket.
 
 2.  Click **Create Bucket**. The **Create a Bucket** dialog box will appear.
 
-![](./media/image3.png)
+![images](./media/image3.png)
 
 3.  Enter a bucket name in the **Bucket Name** field. The bucket name
     you choose must be unique across all existing bucket names in Amazon
