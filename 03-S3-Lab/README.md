@@ -110,7 +110,7 @@ access to the file.
     be using the standard tiering option. Depending on your use case you
     can choose other tiering options
 
-    ![images](./media3/media/image9.png)
+    ![images](./media/image9.png)
     
 6.  Click **Upload**. You can watch the progress of the upload at the
     bottom of the screen. This appears as soon as the upload begins.
