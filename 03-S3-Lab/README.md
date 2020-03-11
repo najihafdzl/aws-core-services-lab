@@ -61,22 +61,17 @@ the bucket. Make sure the bucket name you choose is appropriate.*
 
 3.  You also have the option of copying settings from an existing bucket
 
-4.  Under **Tags**, in the **Key** box, type **Purpose**, and in the
-    **Value** box, enter **Immersion Day**.
-
-5.  Have a good look at the other options, but leave them as default for
+4.  Have a good look at the other options, but leave them as default for
     this lab. Click
     **Next**.
-    
-    ![images](./media/image4.png)
 
-6.  Under set permissions. We will block public access to the bucket
+5.  Under set permissions. We will block public access to the bucket
 
     ![images](./media/image5.png)
 
-7.  Click on next
+6.  Click on next
 
-8.  Finally, review your settings and click **Create bucket**. When
+7.  Finally, review your settings and click **Create bucket**. When
     Amazon S3 successfully creates your bucket, the console displays
     your empty bucket in the **Buckets** panel.
 
