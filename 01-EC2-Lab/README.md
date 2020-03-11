@@ -26,29 +26,21 @@ purpose.
 
 2.  In the upper-right corner of the AWS Management Console, confirm you
     are in the desired AWS region (e.g., N. Virginia).
-
+    
 3.  Click on **Key Pairs** in the NETWORK & SECURITY section near the
     bottom of the leftmost menu. This will display a page to manage your
     SSH key pairs.
 
-![images](media/image2.png)
+    ![images](media/image2.png)
 
-4.  To create a new SSH key pair, click the **Create Key Pair** button
-    at the top of the browser window.
+4.  To create a new SSH key pair, click the **Create Key Pair** button at the top of the browser window.
 
-    ![Macintosh
-    HD:Users:travb:Documents:EC2\_Management\_Console.png](./media/image3.png){width="7.0in"
-    height="1.91875in"}
+    ![images](./media/image3.png)
 
-5.  In the resulting pop up window, type *\[First Name\]-\[Last
-    Name\]-ImmersionDay* into the **Key Pair Name:** text box and click
-    **Create.\
-    \
-    **![Macintosh
-    HD:Users:travb:Documents:EC2\_Management\_Console.png](./media/image4.png){width="3.5in"
-    height="1.3334995625546806in"}**\
-    **
-
+5.  In the resulting pop up window, type *\[First Name\]-\[Last Name\]-ImmersionDay* into the **Key Pair Name:** text box and click **Create.
+    
+    [images](./media/image4.png)
+    
 6.  The page prompt you to download the file "*\[First Name\]-\[Last
     Name\]-ImmersionDay*.pem" to the local drive. Follow your browser
     instructions to save the file to the default download location.
@@ -64,19 +56,18 @@ Apache/PHP, and install a basic web page that will display information
 about our instance.
 
 Sign into your AWS Management Console and choose EC2 from the Services
-menu. [ ]{.underline}
+menu.
 
 8.  Click on Launch Instance
 
-![](./media/image7.png){width="7.1in" height="1.4916666666666667in"}
+![images](./media/image7.png)
 
 9.  In the **Quick Start** section, select the first Amazon Linux 2 AMI
     for 64-bit (x86) architecture and click **Select.** Note that the
     ami-xxxxxxxxx label and specific versions of the installed package
     may be different than in the image below.
 
-![](./media/image8.png){width="7.091666666666667in"
-height="1.8083333333333333in"}
+![images](./media/image8.png)
 
 10. In the Step 2. *Choose an Instance Type*, select the **t2.micro**
     instance size and click **Next: Configure Instance Details**.
@@ -93,6 +84,7 @@ height="1.8083333333333333in"}
 | https://s3.amazonaws.com/immersionday-labs/bootstrap.sh |
 +---------------------------------------------------------+
 
+    
 12. On this page you have the ability to modify or add storage and disk
     drives to the instance. For this lab, we will simply accept the
     storage defaults and click **Next: Add Tags.**
@@ -114,7 +106,7 @@ height="1.8083333333333333in"}
     confirm TCP port 80 is allowed from Anywhere *(you'll notice, that
     "Anywhere is the same as '0.0.0.0/0')*. Click **Add Rule**.
 
-![](./media/image9.png){width="7.1in" height="1.1215277777777777in"}
+![images](./media/image9.png)
 
 16. Click the **Review and Launch** button after configuring the
     security group.
@@ -135,32 +127,29 @@ height="1.8083333333333333in"}
 20. Click the checkbox next to your web server to view details about
     this EC2 instance.
 
-![Macintosh
-HD:Users:travb:Documents:EC2\_Management\_Console.png](./media/image10.png){width="6.988194444444445in"
-height="4.58125in"}
+![images](./media/image10.png)
 
 Browse the Web Server
 =====================
 
 1.  Wait for the instance to pass the Status Checks to finish
-    loading.![Macintosh
-    HD:Users:travb:Documents:EC2\_Management\_Console.png](./media/image11.png){width="7.0in"
-    height="0.6277777777777778in"}\
-    Finished initializing\
-    ![Macintosh
-    HD:Users:travb:Documents:EC2\_Management\_Console.png](./media/image12.png){width="7.0in"
-    height="0.5465277777777777in"}
+    loading.
+    ![images](./media/image11.png)
+    
+    Finished initializing
+    
+    ![images](./media/image12.png)
 
 Open a new browser tab and browse the Web Server by entering the EC2
 instance's Public DNS name into the browser. The EC2 instance's Public
 DNS name can be found in the console by reviewing the "Public DNS" name
-line highlighted above.\
-\
+line highlighted above.
+
+
 You should see a website that looks like the following:
 
-![Macintosh
-HD:Users:travb:Documents:Welcome\_to\_the\_AWS\_Tech\_Fundamentals\_Bootcamp.png](./media/image13.png){width="4.790494313210849in"
-height="1.6633661417322834in"}
+![images](./media/image13.png)
+
 
 Great Job! You have deployed a server and launched a web site in a matter of minutes!! 
 --------------------------------------------------------------------------------------
