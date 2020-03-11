@@ -77,12 +77,10 @@ menu.
     then, copy/paste the script below into the **User Data** field. This
     shell script will install Apache & PHP, start the web service, and
     deploy a simple web page. Click **Next: Add Storage.**
-
-+---------------------------------------------------------+
-| \#include                                               |
-|                                                         |
-| https://s3.amazonaws.com/immersionday-labs/bootstrap.sh |
-+---------------------------------------------------------+
+    
+```sh
+#include https://s3.amazonaws.com/immersionday-labs/bootstrap.sh
+```
 
     
 12. On this page you have the ability to modify or add storage and disk
