@@ -18,7 +18,7 @@ By doing this labs you will learn about the AWS foundational services as well as
 [4. IAM Hands-On Lab](04-IAM-Lab/README.md)
 
 
-## How to login to your lab environment via Event Engine
+## How to login to your lab environment
 
 Before starting the labs yo will receive the credentials to access your AWS environment.
 
